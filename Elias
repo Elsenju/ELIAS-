@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    float R1, R2, R3;
+float  Voltaje,RT,I1,I2,I3,IT;
+
+    printf("Digita el voltaje de tu circuito electrico;");
+    scanf("%f",&Voltaje);
+
+    printf("Digita el valor de R1,R2,R3 separadas por coma:");
+    scanf("%f,%f,%f",&R1,&R2,&R3);
+
+    RT=(1/R1)+(1/R2)+(1/R3);
+    printf("la resistencia total es: %3f", RT);
+    I1=Voltaje/R1;
+    printf("la corriente 1 es igual a: %3f ",I1);
+    I2=Voltaje/R2;
+    printf("la corriente 2 es igual a: %3f ",I2);
+    I3=Voltaje/R3;
+    printf("la corriente 3 es igual a: %3f" ,I3);
+    IT=I3+I2+I1;
+    RT=(1/R1)+(1/R2)+(1/R3);
+    printf("la corriente total del circuito electrico es: %3f  ",IT);
+    return 0;
+}
